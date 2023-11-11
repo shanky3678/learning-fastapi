@@ -37,7 +37,7 @@ def getBook(item_id: int = Path(description="The ID of the item that you would l
 
 
 @app.get('/get-all/{item_id}')
-def getall(*,item_id: int , q: str| None = None):
+def getall(*,item_id: int , q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
 
